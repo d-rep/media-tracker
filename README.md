@@ -2,7 +2,7 @@
 
 This is a simple web application, for tracking any media that you consume, such as books, TV shows, movies, or video games.
 
-This is meant to illustrate how to build an old school Java web application, using the Spring 3, Struts 2, & Hibernate frameworks.  It is built with Maven and Java 1.6.
+This is meant to illustrate how to build an old school Java web application, using the Spring 3, Struts 2, & Hibernate frameworks.  (Deliberately not using JPA and instead use hand-written DAO's.)  It is built with Maven and Java 1.6.
 
 The Eclipse metadata is included, so the project can be imported into Spring Tool Suite.
 
