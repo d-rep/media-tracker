@@ -8,6 +8,13 @@
 	<!-- tell Spring to use annotation-based config (like @Autowired) -->
 	<context:annotation-config />
 	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	
 	<bean id="mediaDao" class="com.repaskys.web.data.MediaDaoImpl"/>
 
 	<bean id="mediaService" class="com.repaskys.web.services.MediaServiceImpl"/>

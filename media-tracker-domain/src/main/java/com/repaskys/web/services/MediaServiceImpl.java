@@ -19,9 +19,10 @@ public class MediaServiceImpl implements MediaService {
 		
 		boolean success = false;
 		try{
-			success = mediaDao.save(media);
+			mediaDao.store(media);
+			success = true;
 		} catch(RuntimeException ex) {
-			LOGGER.error("Problem happened while saving Media items", ex);
+			LOGGER.error("Problem happened while saving Media item", ex);
 		}
 		
 		return success;

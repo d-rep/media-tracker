@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.repaskys.web.domain">
+	<class name="Media" table="MEDIA">
+		<id name="id" type="long" column="ID">
+			<generator class="identity"/>
+		</id>
+		<property name="title" type="string">
+			<column name="TITLE" length="100" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

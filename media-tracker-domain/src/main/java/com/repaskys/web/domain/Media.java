@@ -9,7 +9,16 @@ import org.apache.commons.lang.builder.ToStringStyle;
 
 public class Media implements Serializable {
 	private static final long serialVersionUID = -2708426606290701594L;
+	private Long id;
 	private String title;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getTitle() {
 		return title;

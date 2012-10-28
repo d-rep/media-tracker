@@ -7,7 +7,9 @@
 	</head>
 	<body>
 		<h1>Success!</h1>
-		Your new media item has been created: 
-		<s:property value="media.title"/>
+		<p>
+			Your new media item has been created: 
+			<s:property value="media.title"/>
+		</p>
 	</body>
 </html>
