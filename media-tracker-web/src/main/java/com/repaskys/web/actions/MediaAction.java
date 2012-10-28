@@ -1,5 +1,7 @@
 package com.repaskys.web.actions;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,16 @@ public class MediaAction implements Preparable {
 	@Autowired
 	private MediaService mediaService;
 	
+	private List<Media> mediaList;
 	private Media media;
+	
+	public List<Media> getMediaList() {
+		return mediaList;
+	}
+
+	public void setMediaList(List<Media> mediaList) {
+		this.mediaList = mediaList;
+	}
 	
 	public Media getMedia() {
 		return media;
@@ -34,6 +45,8 @@ public class MediaAction implements Preparable {
 			if(mediaService.saveMedia(media)) {
 				returnCode = "SUCCESS";
 			}
+			
+			this.mediaList = mediaService.findAll();
 		}
 		
 		return returnCode;

@@ -1,5 +1,7 @@
 package com.repaskys.web.services;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +31,9 @@ public class MediaServiceImpl implements MediaService {
 	}
 
 	@Override
-	public Iterable<Media> findAll() {
+	public List<Media> findAll() {
 		LOGGER.trace("called into MediaServiceImpl#findAll");
-		Iterable<Media> results = null;
+		List<Media> results = null;
 		try{
 			results = mediaDao.findAll();
 		} catch(RuntimeException ex) {
